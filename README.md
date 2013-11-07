@@ -1,14 +1,26 @@
 # Rulers
 
-This is the Ruby on Rulers framework from the book "Rebuilding Rails"
-by Noah Gibbs.  You can find the canonical branch of this framework at
-"http://github.com/noahgibbs/rulers".
+This is my implementation of a Ruby on Rulers framework.  It is primarily for instruction, but it works just fine as a web framework if you want a simple (but completely insecure!) one.
 
-It is primarily for instruction, but it works just fine as a web
-framework if you want a simple one.
 
-There are tags for different chapter starter code.  Type "git tag"
-for a list.
+## Implementation
+
+### Branch chapter_1
+
+Implementing my own very basic version of Rails, called Rulers.  Creating just enough framework to run a rails server on.  This is a reusable Ruby library that is a gem.  This Rulers gem is then included in my sample application, best_quotes.
+
+### Branch chapter_2
+
+Implementing controllers.  Mmmmm, routing.
+
+### Branch chapter_3
+
+Played with regex to convert camel case to snake case.  Also, take a look at the 'rerun' gem for reloading your server automatically when files in your directory tree change...sadly no help when developing the rulers framework.
+
+### Branch chapter_4
+
+Here I implement a basic set of views with ERB support.
+
 
 ## Installation
 
@@ -27,6 +39,7 @@ Or install it yourself as:
 For git gems, you'll need to run "bundle exec rackup" instead of just
 "rackup".
 
+
 ## Usage
 
 This framework is instructional and there are good reasons not to use
@@ -36,13 +49,14 @@ but Rulers is not.
 For further details, see the Rails security guides and/or chapter 10
 of Rebuilding Rails.
 
+
 ## Contributing
 
-For significant contributions, please fork.
+No real need.  This is just an exercise for my own learning.
 
-I have no problem with other people starting from this code for any
-purpose and for any project.  You probably want to rename it, though.
 
 ## Attributions
 
-The above was copied from Noah's readme, since it seemed to say everything necessary.  -sprestage
+This exercise in learning was guided by the book "Rebuilding Rails" by Noah Gibbs.  You can find the canonical branch of this framework at "http://github.com/noahgibbs/rulers".
+
+
