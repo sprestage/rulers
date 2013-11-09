@@ -23,41 +23,15 @@ Here I implement a basic set of views with ERB support.
 
 ### Branch chapter_5
 
-I just implemented the model.  This is now officially an MVC framework.
-Implementing models based on files instead of databases.  JSON files, in particular
+I just implemented the model. This is now officially an MVC framework. Implementing models based on files instead of databases, JSON files, in particular.
 
-PROBLEM: Things broke at the end of chapter 5.  I don't under stand quite why.  I used similar syntax in the little erubis example we did, so I though I understood it.  Here is the output when I try to start the server:
+COMMENT: One bug was the importance of formatting the TEMPLATE section. Left justified is important here. Without it, it breaks. Ok.
 
-susanmaclaptop:best_quotes susan$ bundle exec rackup -p 3001
-/Users/susan/Documents/myProjects/codefellows/rebuildingRails/rulers/lib/rulers/controller.rb:3:in `require': /Users/susan/Documents/myProjects/codefellows/rebuildingRails/rulers/lib/rulers/file_model.rb:65: can't find string "TEMPLATE" anywhere before EOF (SyntaxError)
-/Users/susan/Documents/myProjects/codefellows/rebuildingRails/rulers/lib/rulers/file_model.rb:50: syntax error, unexpected end-of-input, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/rulers/lib/rulers/controller.rb:3:in `<top (required)>'
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/rulers/lib/rulers.rb:6:in `require'
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/rulers/lib/rulers.rb:6:in `<top (required)>'
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/best_quotes/config/application.rb:2:in `require'
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/best_quotes/config/application.rb:2:in `<top (required)>'
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/best_quotes/config.ru:1:in `require'
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/best_quotes/config.ru:1:in `block in <main>'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/best_quotes/config.ru:in `new'
-  from /Users/susan/Documents/myProjects/codefellows/rebuildingRails/best_quotes/config.ru:in `<main>'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/builder.rb:49:in `eval'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/builder.rb:49:in `new_from_string'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/builder.rb:40:in `parse_file'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/server.rb:277:in `build_app_and_options_from_config'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/server.rb:199:in `app'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/server.rb:314:in `wrapped_app'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/server.rb:250:in `start'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/server.rb:141:in `start'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/bin/rackup:4:in `<top (required)>'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/bin/rackup:23:in `load'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/bin/rackup:23:in `<main>'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `eval'
-  from /Users/susan/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `<main>'
-susanmaclaptop:best_quotes susan$
+COMMENT: Another bug was where I accidentally had the implicitly returned array at the end of my call() commented out. I won't forget that again, I hope.
 
-### branch chapter 6
+### Branch chapter_6
+
+Implement requests with rack.  Rack's request object is built from the environment.  Rack makes this easy so we don't have to do the hard work.
 
 
 ## Installation
