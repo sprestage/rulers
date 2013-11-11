@@ -31,16 +31,13 @@ module Rulers
       end
 
       text = controller.send(act)
-
-      [200, {'Content-Type' => 'text/html'}, [text]]
+      if controller.get_response
+        st, hd, rs = controller.get_response.to_a
+        [st, hd, [rs.body].flatten]
+      else
+        [200, {'Content-Type' => 'text/html'}, [text]]
+      end
     end
+
   end
-
-    # def self.to_underscore(string)
-    #   my_string = string.gsub(/::/, File::SEPARATOR).
-    #     gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').
-    #     gsub(/([a-z]\d)([A-Z])/, '\1_\2').
-
-    # end
-
 end

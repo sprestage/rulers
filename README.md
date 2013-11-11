@@ -23,15 +23,15 @@ Here I implement a basic set of views with ERB support.
 
 ### Branch chapter_5
 
-I just implemented the model.  This is now officially an MVC framework.
-Implementing models based on files instead of databases.  JSON files, in particular
+I just implemented the model. This is now officially an MVC framework. Implementing models based on files instead of databases, JSON files, in particular.
 
-COMMENT: One bug was the importance of formatting the TEMPLATE section.  Left justified
-is important here.  Without it, it breaks.  Ok.
+COMMENT: One bug was the importance of formatting the TEMPLATE section. Left justified is important here. Without it, it breaks. Ok.
 
-COMMENT: Another bug was where I accidentally had the implicitly returned array at the end of my call() commented out.  I won't forget that again, I hope.
+COMMENT: Another bug was where I accidentally had the implicitly returned array at the end of my call() commented out. I won't forget that again, I hope.
 
-### branch chapter_6
+### Branch chapter_6
+
+Implement requests with rack.  Rack's request object is built from the environment.  Rack makes this easy so we don't have to do the hard work.  Also implemented responses, with Rack::Response.
 
 
 ## Installation
