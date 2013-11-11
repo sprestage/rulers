@@ -31,7 +31,7 @@ COMMENT: Another bug was where I accidentally had the implicitly returned array 
 
 ### Branch chapter_6
 
-Implement requests with rack.  Rack's request object is built from the environment.  Rack makes this easy so we don't have to do the hard work.
+Implement requests with rack.  Rack's request object is built from the environment.  Rack makes this easy so we don't have to do the hard work.  Also implemented responses, with Rack::Response.
 
 
 ## Installation
